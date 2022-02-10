@@ -8,7 +8,7 @@ branch.
 
 ## Version
 
-`v0.11.0` (uses [terraform-docs] v0.16.0, which is supported and tested on Terraform
+`v1.0.0` (uses [terraform-docs] v0.16.0, which is supported and tested on Terraform
 version 0.11+ and 0.12+ but may work for others.)
 
 ## Usage
@@ -29,7 +29,7 @@ jobs:
         ref: ${{ github.event.pull_request.head.ref }}
 
     - name: Render terraform docs inside the README.md and push changes back to PR branch
-      uses: terraform-docs/gh-actions@v0.11.0
+      uses: terraform-docs/gh-actions@v1.0.0
       with:
         working-dir: .
         output-file: README.md
@@ -134,7 +134,7 @@ To enable you need to ensure a few things first:
 
 ```yaml
 - name: Generate TF Docs
-  uses: terraform-docs/gh-actions@v0.11.0
+  uses: terraform-docs/gh-actions@v1.0.0
   with:
     working-dir: .
 ```
@@ -143,7 +143,7 @@ To enable you need to ensure a few things first:
 
 ```yaml
 - name: Generate TF Docs
-  uses: terraform-docs/gh-actions@v0.11.0
+  uses: terraform-docs/gh-actions@v1.0.0
   with:
     working-dir: .,example1,example3/modules/test
 ```
@@ -152,7 +152,7 @@ To enable you need to ensure a few things first:
 
 ```yaml
 - name: Generate TF docs
-  uses: terraform-docs/gh-actions@v0.11.0
+  uses: terraform-docs/gh-actions@v1.0.0
   with:
     atlantis-file: atlantis.yaml
 ```
@@ -161,7 +161,7 @@ To enable you need to ensure a few things first:
 
 ```yaml
 - name: Generate TF docs
-  uses: terraform-docs/gh-actions@v0.11.0
+  uses: terraform-docs/gh-actions@v1.0.0
   with:
     find-dir: examples/
 ```
@@ -170,13 +170,13 @@ To enable you need to ensure a few things first:
 
 ```yaml
 - name: Generate TF docs
-  uses: terraform-docs/gh-actions@v0.11.0
+  uses: terraform-docs/gh-actions@v1.0.0
   with:
     working-dir: examples/
     recursive: true
     recursive-path: modules
 ```
 
-Complete examples can be found [here](https://github.com/terraform-docs/gh-actions/tree/v0.11.0/examples).
+Complete examples can be found [here](https://github.com/terraform-docs/gh-actions/tree/v1.0.0/examples).
 
 [terraform-docs]: https://github.com/terraform-docs/terraform-docs
